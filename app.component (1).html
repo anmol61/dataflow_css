@@ -1,0 +1,80 @@
+<!-- Container -->
+<div class="row mt-5">
+
+  <!-- Column -->
+  <div class="col-md-5 mb-4 d-flex pr-0 align-items-center">
+
+    <!--Card Primary-->
+    <div class="card indigo text-center z-depth-2 w-100"  style="border: none !important;">
+      <div class="card-body pr-0 w-100">
+        <table class="w-100">
+          <tr  *ngFor="let comp of leftSideData">
+            <td class="col-md-5 pr-0">
+              <div [ngClass]="comp.bgColor" class="div-border card center">{{comp.name}}</div>
+            </td>
+            <td class="col-md-7">            
+              <div>
+                <span>{{comp.note}}</span>
+              </div>
+              <div>
+                <div [ngClass]="comp.inbound == true ? 'arrow-left' : 'arrow-right'" class="line-horizontal"></div>
+              </div>
+              <div>
+                <p>{{comp.note2}}</p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!--/.Card Primary-->
+
+  </div>
+  <!-- Column -->
+
+  <!-- Column -->
+  <div class="col-md-1 mb-4 pl-0 pr-2 d-flex align-items-stretch">
+
+    <!--Card Primary-->
+    <div class="card bg-warning z-depth-2 w-100">
+      <div class="card-body text-center">
+        <p class="white-text mb-0">{{appName}}</p>
+      </div>
+    </div>
+    <!--/.Card Primary-->
+
+  </div>
+  <!-- Column -->
+
+  <!-- Column -->
+  <div class="col-md-5 mb-4 pl-0 d-flex align-items-center">
+
+    <!--Card Primary-->
+    <div class="card w-100 info-color text-center z-depth-2" style="border: none !important;">
+      <div class="card-body pl-0 w-100">
+        <table class="w-100">
+          <tr *ngFor="let comp of rightSideData">
+            <td class="col-md-7  pl-0">            
+              <div>
+                <span>{{comp.note}}</span>
+              </div>
+              <div>
+                <div [ngClass]="comp.inbound == true ? 'arrow-right' : 'arrow-left'" class="line-horizontal"></div>
+              </div>
+              <div>
+                <p>{{comp.note2}}</p>
+              </div>
+            </td>
+            <td class="col-md-5">
+              <div  [ngClass]="comp.bgColor" class="div-border card">{{comp.name}}</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!--/.Card Primary-->
+
+  </div>
+  <!-- Column -->
+
+</div>

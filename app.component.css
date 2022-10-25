@@ -1,0 +1,77 @@
+.div-border{
+height: 70px;
+border: 1px solid;
+text-align: center;
+margin-bottom: 10%;
+
+}
+
+.div-main{
+    border: 1px solid;
+    margin: auto;
+    margin-top: 3%;
+}
+
+.float-left-box {
+    float: left; padding: 15px 0 0 45px;
+}
+
+/***************** PARAMS SECTION ******************/
+/* horizontal arrows */
+.line-horizontal {
+    height: 2px;    /* line width */
+    width: 98%; /* line length */
+}
+/* vertical arrows */
+.line-vertical {
+    width: 2px; /* line-width */
+    height: 75px; /* line length */
+    margin-left: 20px;
+    margin-top: 35px;
+    float: left;
+}
+
+/*********************** CSS *************************/
+/* common arrow styles */
+.line-vertical, .line-horizontal {
+    position: relative;
+    background: #aaa;
+}
+.arrow-up:after,
+.arrow-down:before,
+.arrow-left:after,
+.arrow-right:before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 5px solid transparent;
+}
+
+/* vertical arrows */
+.arrow-up:after,
+.arrow-down:before {
+    left: -4px;
+}
+.arrow-up:after {
+    top: -15px;
+    border-bottom: 15px solid #aaa;
+}
+.arrow-down:before {
+    bottom: -15px;
+    border-top: 15px solid #aaa;
+}
+
+/* horizontal arrows */
+.arrow-left:after,
+.arrow-right:before {
+    top: -4px;
+}
+.arrow-left:after {
+    left: -15px;
+    border-right: 15px solid #aaa;
+}
+.arrow-right:before {
+    right: -15px;
+    border-left: 15px solid #aaa;
+}
